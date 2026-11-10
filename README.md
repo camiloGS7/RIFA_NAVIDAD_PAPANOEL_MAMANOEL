@@ -11,7 +11,7 @@ La interfaz está diseñada para ser utilizada sin capacitación previa por pers
 | Concepto | Detalle |
 |---|---|
 | Premio | Pareja de muñecos de Papá Noel y Mamá Noel |
-| Valor del boleto | $10.000 COP (configurable mediante `PRECIO_BOLETO`) |
+| Valor del boleto | $15.000 COP (configurable mediante `PRECIO_BOLETO`) |
 | Fecha del sorteo | 12 de diciembre |
 | Mecánica | Últimas dos cifras del premio mayor de la Lotería de Boyacá |
 
