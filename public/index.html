@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#9E1B22" />
+  <meta name="color-scheme" content="light" />
+  <title>Gran Rifa Papá y Mamá Noel</title>
+  <meta name="description" content="Registro de ventas de la Gran Rifa Papá y Mamá Noel." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9952B' d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Iconos (estilo de trazo, 24x24) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+      <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="saltar" href="#contenido">Ir al contenido</a>
+
+  <!-- ===================== Encabezado ===================== -->
+  <header class="cabecera">
+    <div class="luces" aria-hidden="true"></div>
+    <div class="contenedor cabecera__cuerpo">
+      <div class="cabecera__titulo">
+        <p class="cabecera__antetitulo" data-rifa="antetitulo">Gran Rifa</p>
+        <h1 data-rifa="titulo">Papá y Mamá Noel</h1>
+      </div>
+
+      <div class="premio">
+        <img class="premio__foto" id="foto-premio" src="/img/papa-mama-noel.jpg" alt="Premio: muñecos de Papá Noel y Mamá Noel tomados de la mano" width="225" height="235" />
+        <ul class="premio__datos">
+          <li>
+            <svg class="icono" aria-hidden="true"><use href="#i-gift"/></svg>
+            <span><strong>Premio:</strong> <span data-rifa="premio">Pareja de muñecos de Papá Noel y Mamá Noel</span></span>
+          </li>
+          <li>
+            <svg class="icono" aria-hidden="true"><use href="#i-ticket"/></svg>
+            <span><strong>Valor:</strong> <span data-precio>$10.000</span> por boleto</span>
+          </li>
+          <li>
+            <svg class="icono" aria-hidden="true"><use href="#i-calendar"/></svg>
+            <span><strong>Sorteo:</strong> <span data-rifa="fechaSorteo">12 de diciembre</span>, últimas 2 cifras de la <span data-rifa="loteria">Lotería de Boyacá</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Navegación ===================== -->
+  <nav class="pestanas" aria-label="Secciones">
+    <div class="contenedor pestanas__lista" role="tablist">
+      <button class="pestana" role="tab" id="tab-talonario" aria-controls="vista-talonario" aria-selected="true" data-vista="talonario">
+        <svg class="icono" aria-hidden="true"><use href="#i-grid"/></svg>
+        <span>Números</span>
+      </button>
+      <button class="pestana" role="tab" id="tab-compradores" aria-controls="vista-compradores" aria-selected="false" data-vista="compradores" tabindex="-1">
+        <svg class="icono" aria-hidden="true"><use href="#i-users"/></svg>
+        <span>Compradores</span>
+      </button>
+      <button class="pestana" role="tab" id="tab-ganador" aria-controls="vista-ganador" aria-selected="false" data-vista="ganador" tabindex="-1">
+        <svg class="icono" aria-hidden="true"><use href="#i-trophy"/></svg>
+        <span>Ganador</span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="contenido" class="contenedor">
+
+    <!-- Aviso de conexión -->
+    <div id="aviso-error" class="aviso" role="alert" hidden>
+      <svg class="icono" aria-hidden="true"><use href="#i-alert"/></svg>
+      <p id="aviso-error-texto">No hay conexión con el servidor.</p>
+      <button type="button" class="boton boton--secundario boton--compacto" data-accion="recargar">Reintentar</button>
+    </div>
+
+    <!-- Resumen -->
+    <section class="resumen" aria-label="Resumen de ventas">
+      <div class="resumen__tarjeta">
+        <span class="resumen__etiqueta">Vendidos</span>
+        <strong class="resumen__valor" id="res-vendidos">0</strong>
+      </div>
+      <div class="resumen__tarjeta">
+        <span class="resumen__etiqueta">Disponibles</span>
+        <strong class="resumen__valor" id="res-disponibles">100</strong>
+      </div>
+      <div class="resumen__tarjeta resumen__tarjeta--dinero">
+        <span class="resumen__etiqueta">Dinero recogido</span>
+        <strong class="resumen__valor" id="res-recaudado">$0</strong>
+      </div>
+      <div class="resumen__tarjeta resumen__tarjeta--deuda">
+        <span class="resumen__etiqueta">Falta por cobrar <span class="resumen__detalle" id="res-pendientes"></span></span>
+        <strong class="resumen__valor" id="res-por-cobrar">$0</strong>
+      </div>
+      <div class="progreso" aria-hidden="true">
+        <div class="progreso__barra" id="res-barra"></div>
+      </div>
+    </section>
+
+    <!-- ===================== Vista: Números ===================== -->
+    <section id="vista-talonario" class="vista" role="tabpanel" aria-labelledby="tab-talonario">
+      <div class="vista__encabezado">
+        <div>
+          <h2>Elija un número</h2>
+          <p class="texto-suave">Toque un número libre para anotar al comprador. Toque uno vendido para ver sus datos.</p>
+        </div>
+        <div class="botonera">
+          <button type="button" class="boton boton--primario boton--compacto" id="boton-historia">
+            <svg class="icono" aria-hidden="true"><use href="#i-image"/></svg>
+            <span id="boton-historia-texto">Imagen para historia</span>
+          </button>
+          <button type="button" class="boton boton--secundario boton--compacto" data-accion="recargar" aria-label="Actualizar números">
+            <svg class="icono" aria-hidden="true"><use href="#i-refresh"/></svg>
+            <span>Actualizar</span>
+          </button>
+        </div>
+      </div>
+
+      <ul class="leyenda" aria-label="Significado de los colores">
+        <li><span class="muestra muestra--libre" aria-hidden="true">07</span> Libre</li>
+        <li><span class="muestra muestra--vendido" aria-hidden="true"><svg class="icono"><use href="#i-check"/></svg></span> Vendido y pagado</li>
+        <li><span class="muestra muestra--debe" aria-hidden="true"><svg class="icono"><use href="#i-clock"/></svg></span> Vendido, falta pagar</li>
+      </ul>
+
+      <div id="grilla-cargando" class="cargando" role="status">
+        <span class="cargando__circulo" aria-hidden="true"></span>
+        Cargando los números…
+      </div>
+      <div id="grilla" class="grilla" hidden></div>
+    </section>
+
+    <!-- ===================== Vista: Compradores ===================== -->
+    <section id="vista-compradores" class="vista" role="tabpanel" aria-labelledby="tab-compradores" hidden>
+      <div class="vista__encabezado">
+        <div>
+          <h2>Compradores</h2>
+          <p class="texto-suave" id="compradores-conteo">Aún no hay ventas.</p>
+        </div>
+        <a class="boton boton--secundario boton--compacto" id="enlace-exportar" href="/api/boletos/exportar" download>
+          <svg class="icono" aria-hidden="true"><use href="#i-download"/></svg>
+          <span>Descargar lista</span>
+        </a>
+      </div>
+
+      <div class="campo campo--buscar">
+        <label for="buscar" class="campo__etiqueta">Buscar por nombre, número o teléfono</label>
+        <div class="campo__con-icono">
+          <svg class="icono" aria-hidden="true"><use href="#i-search"/></svg>
+          <input id="buscar" type="search" class="campo__entrada" autocomplete="off" placeholder="Ejemplo: María o 25" />
+        </div>
+      </div>
+
+      <fieldset class="filtro">
+        <legend class="campo__etiqueta">Mostrar</legend>
+        <div class="filtro__opciones">
+          <label class="filtro__opcion"><input type="radio" name="filtro-pago" value="todos" checked /><span>Todos</span></label>
+          <label class="filtro__opcion"><input type="radio" name="filtro-pago" value="pagados" /><span>Ya pagaron</span></label>
+          <label class="filtro__opcion"><input type="radio" name="filtro-pago" value="deben" /><span>Deben</span></label>
+        </div>
+      </fieldset>
+
+      <ul id="lista-compradores" class="lista"></ul>
+      <p id="lista-vacia" class="vacio" hidden></p>
+    </section>
+
+    <!-- ===================== Vista: Ganador ===================== -->
+    <section id="vista-ganador" class="vista" role="tabpanel" aria-labelledby="tab-ganador" hidden>
+      <div class="vista__encabezado">
+        <div>
+          <h2>Consultar ganador</h2>
+          <p class="texto-suave">Escriba las 2 últimas cifras del premio mayor de la <span data-rifa="loteria">Lotería de Boyacá</span>.</p>
+        </div>
+      </div>
+
+      <form id="form-ganador" class="ganador" novalidate>
+        <div class="campo">
+          <label for="numero-ganador" class="campo__etiqueta">Número ganador</label>
+          <input id="numero-ganador" class="campo__entrada campo__entrada--numero" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" placeholder="00" />
+          <p class="campo__error" id="error-ganador" hidden></p>
+        </div>
+        <button type="submit" class="boton boton--primario">
+          <svg class="icono" aria-hidden="true"><use href="#i-search"/></svg>
+          <span>Buscar ganador</span>
+        </button>
+      </form>
+
+      <div id="resultado-ganador" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="pie contenedor">
+    <p><span data-rifa="nombreCompleto">Gran Rifa Papá y Mamá Noel</span> · Sorteo el <span data-rifa="fechaSorteo">12 de diciembre</span> con la <span data-rifa="loteria">Lotería de Boyacá</span></p>
+  </footer>
+
+  <!-- ===================== Ventana de número ===================== -->
+  <dialog id="dialogo" class="dialogo" aria-labelledby="dialogo-titulo">
+    <div class="dialogo__cabecera">
+      <span class="ficha" id="dialogo-ficha">00</span>
+      <div class="dialogo__titulos">
+        <p class="dialogo__estado" id="dialogo-estado">Disponible</p>
+        <h2 id="dialogo-titulo">Número 00</h2>
+      </div>
+      <button type="button" class="boton-icono" data-accion="cerrar" aria-label="Cerrar">
+        <svg class="icono" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+
+    <!-- Formulario de venta / corrección -->
+    <form id="form-comprador" class="dialogo__cuerpo" novalidate>
+      <p class="texto-suave" id="form-ayuda">Anote los datos del comprador. El teléfono sirve para avisarle si gana.</p>
+
+      <div class="campo">
+        <label for="campo-nombre" class="campo__etiqueta">Nombre completo</label>
+        <input id="campo-nombre" name="nombre" class="campo__entrada" type="text" autocomplete="off" autocapitalize="words" maxlength="100" aria-describedby="error-nombre" />
+        <p class="campo__error" id="error-nombre" hidden></p>
+      </div>
+
+      <div class="campo">
+        <label for="campo-telefono" class="campo__etiqueta">Teléfono celular</label>
+        <input id="campo-telefono" name="telefono" class="campo__entrada" type="tel" inputmode="tel" autocomplete="off" maxlength="20" placeholder="300 123 4567" aria-describedby="ayuda-telefono error-telefono" />
+        <p class="campo__ayuda" id="ayuda-telefono">Para llamarle o escribirle si gana.</p>
+        <p class="campo__error" id="error-telefono" hidden></p>
+      </div>
+
+      <fieldset class="campo pago" id="campo-pagado" aria-describedby="error-pagado">
+        <legend class="campo__etiqueta">¿Ya pagó el boleto (<span data-precio>$10.000</span>)?</legend>
+        <div class="pago__opciones">
+          <label class="pago__opcion pago__opcion--si">
+            <input type="radio" name="pagado" value="si" />
+            <svg class="icono" aria-hidden="true"><use href="#i-check"/></svg>
+            <span>Sí, ya pagó</span>
+          </label>
+          <label class="pago__opcion pago__opcion--no">
+            <input type="radio" name="pagado" value="no" />
+            <svg class="icono" aria-hidden="true"><use href="#i-clock"/></svg>
+            <span>No, queda debiendo</span>
+          </label>
+        </div>
+        <p class="campo__error" id="error-pagado" hidden></p>
+      </fieldset>
+
+      <p class="campo__error campo__error--general" id="error-general" role="alert" hidden></p>
+
+      <div class="acciones">
+        <button type="submit" class="boton boton--primario" id="boton-guardar">
+          <svg class="icono" aria-hidden="true"><use href="#i-check"/></svg>
+          <span id="boton-guardar-texto">Guardar venta</span>
+        </button>
+        <button type="button" class="boton boton--secundario" data-accion="cancelar-formulario">Cancelar</button>
+      </div>
+    </form>
+
+    <!-- Detalle de boleto vendido -->
+    <div id="detalle" class="dialogo__cuerpo" hidden>
+      <dl class="datos">
+        <div><dt>Comprador</dt><dd id="detalle-nombre">—</dd></div>
+        <div><dt>Teléfono</dt><dd id="detalle-telefono">—</dd></div>
+        <div><dt>Pago</dt><dd><span class="etiqueta-pago" id="detalle-pago">—</span></dd></div>
+        <div><dt>Fecha de venta</dt><dd id="detalle-fecha">—</dd></div>
+      </dl>
+
+      <button type="button" class="boton boton--pago" id="boton-cambiar-pago" data-accion="cambiar-pago">
+        <svg class="icono" aria-hidden="true"><use href="#i-cash"/></svg>
+        <span id="boton-cambiar-pago-texto">Marcar como pagado</span>
+      </button>
+
+      <div class="acciones acciones--contacto">
+        <a class="boton boton--primario" id="detalle-llamar" href="#">
+          <svg class="icono" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>Llamar</span>
+        </a>
+        <a class="boton boton--whatsapp" id="detalle-whatsapp" href="#" target="_blank" rel="noopener">
+          <svg class="icono" aria-hidden="true"><use href="#i-chat"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="acciones acciones--secundarias">
+        <button type="button" class="boton boton--secundario" data-accion="corregir">
+          <svg class="icono" aria-hidden="true"><use href="#i-pencil"/></svg>
+          <span>Corregir datos</span>
+        </button>
+        <button type="button" class="boton boton--peligro-suave" data-accion="pedir-anular">
+          <svg class="icono" aria-hidden="true"><use href="#i-trash"/></svg>
+          <span>Anular venta</span>
+        </button>
+      </div>
+
+      <div id="confirmar-anular" class="confirmar" hidden>
+        <p><strong>¿Anular la venta de este número?</strong><br />El número quedará libre y se borrarán el nombre y el teléfono.</p>
+        <div class="acciones">
+          <button type="button" class="boton boton--peligro" data-accion="anular">Sí, anular venta</button>
+          <button type="button" class="boton boton--secundario" data-accion="cancelar-anular">No, dejarlo así</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===================== Acceso con PIN ===================== -->
+  <div id="pantalla-pin" class="pantalla-pin" hidden>
+    <form id="form-pin" class="pantalla-pin__caja" novalidate>
+      <span class="pantalla-pin__icono"><svg class="icono" aria-hidden="true"><use href="#i-lock"/></svg></span>
+      <h2>Acceso de vendedores</h2>
+      <p class="texto-suave">Escriba el PIN para ver y registrar las ventas. Solo se pide una vez en este equipo.</p>
+      <div class="campo">
+        <label for="campo-pin" class="campo__etiqueta">PIN</label>
+        <input id="campo-pin" class="campo__entrada campo__entrada--numero" type="password" inputmode="numeric" autocomplete="current-password" />
+        <p class="campo__error" id="error-pin" hidden></p>
+      </div>
+      <button type="submit" class="boton boton--primario">Entrar</button>
+    </form>
+  </div>
+
+  <!-- Notificación -->
+  <div id="notificacion" class="notificacion" role="status" aria-live="polite" hidden>
+    <svg class="icono" aria-hidden="true"><use href="#i-check"/></svg>
+    <span id="notificacion-texto"></span>
+  </div>
+
+  <script src="/rifa.config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
